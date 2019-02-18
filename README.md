@@ -2,9 +2,9 @@
 Python script to roll dice
 
 ## Usage
-roll <dice> [<dice> [<dice> [...]]]
+`roll <dice> [<dice> [<dice> [...]]]`
   
-<dice> format is as follows:
+`<dice>` format is as follows:
   `WdX[(d|k)(h|l)Y][+|-Z]` where...
   * W = number of dice to roll (required)
   * X = number of sides on each die (required)
