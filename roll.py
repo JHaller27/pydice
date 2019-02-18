@@ -84,8 +84,16 @@ def roll(num_dice: int, dice_size: int, dk_str: str, dk_num: int, mod_num: int) 
     return sum(keep) + mod_num
 
 
-if __name__ == '__main__':
-    dice_str = sys.argv[1]
-    dice_tup = parse_dice(dice_str)
-    print('Result: %d' % roll(*dice_tup))
+def main():
+    sep = False
+    for arg in sys.argv[1:]:
+        dice_tup = parse_dice(arg)
+        if sep:
+            print()
+        else:
+            sep = True
+        print('Result: %d' % roll(*dice_tup))
 
+
+if __name__ == '__main__':
+    main()
